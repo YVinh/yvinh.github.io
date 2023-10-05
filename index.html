@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combined Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calculator">
+        <h1>Mortgage and Property Value Calculator</h1>
+        <label for="principal">Loan Amount (€):</label>
+        <input type="number" id="principal" min="1" step="1" required>
+        <label for="interest">Interest Rate (%):</label>
+        <input type="number" id="interest" min="0" step="0.01" required>
+        <label for="years">Loan Term (Years):</label>
+        <input type="number" id="years" min="1" step="1" required>
+        <label for="initialValue">Initial Property Value (€):</label>
+        <input type="number" id="initialValue" min="1" step="1" required>
+        <label for="transactionCosts">Transaction Costs (%):</label>
+        <input type="number" id="transactionCosts" min="0" step="0.01" required>
+        <label for="growthRate">Annual Growth Rate (%):</label>
+        <input type="number" id="growthRate" min="0" step="0.01" required>
+        <button onclick="calculateYearOfZeroProfitLoss()">Calculate</button>
+    </div>
+
+    <div id="summary">
+        <!-- Summary details will be added by JavaScript -->
+    </div>
+
+    <div id="yearOfZeroProfitLoss">
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Year</th>
+                        <th>Estimated Value</th>
+                        <th>Accrued Interest</th>
+                        <th>Profit / Loss</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- JavaScript will populate this area with rows -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+//blabla
