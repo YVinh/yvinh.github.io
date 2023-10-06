@@ -1,38 +1,3 @@
-function calculate() {
-    // Get user input
-    const interestRate = parseFloat(document.getElementById("interestRate").value);
-    const mortgageAmount = parseFloat(document.getElementById("mortgageAmount").value);
-    const duration = parseInt(document.getElementById("duration").value);
-    const monthlyExpenses = parseFloat(document.getElementById("monthlyExpenses").value);
-    const monthlyRevenue = parseFloat(document.getElementById("monthlyRevenue").value);
-
-    // Calculate monthly interest rate and total number of payments
-    const monthlyInterestRate = interestRate / 100 / 12;
-    const totalPayments = duration * 12;
-
-    // Calculate monthly payment
-    const monthlyPayment = (mortgageAmount * monthlyInterestRate) / (1 - Math.pow(1 + monthlyInterestRate, -totalPayments));
-
-    // Calculate total interests paid
-    const totalInterestsPaid = (monthlyPayment * totalPayments) - mortgageAmount;
-
-    // Calculate weight of credit
-    const weightOfCredit = ((monthlyExpenses + monthlyPayment) / monthlyRevenue) * 100;
-
-    // Display results
-    const formatter = new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' });
-    document.getElementById("monthlyPayment").textContent = formatter.format(monthlyPayment);
-    document.getElementById("totalInterestsPaid").textContent = formatter.format(totalInterestsPaid);
-    document.getElementById("weightOfCredit").textContent = weightOfCredit.toFixed(2) + '%';
-}
-
-// Trigger calculate function on pressing "Enter"
-document.addEventListener('keydown', function(event) {
-    if (event.key === "Enter") {
-        calculate();
-    }
-});
-
 function calculateYearOfZeroProfitLoss() {
     const principal = parseFloat(document.getElementById("principal").value);
     const interest = parseFloat(document.getElementById("interest").value) / 100 / 12;

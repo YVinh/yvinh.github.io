@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mortgage Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calculator">
+        <h1>Mortgage Calculator</h1>
+        <label for="interestRate">Interest Rate (%)</label>
+        <input type="number" id="interestRate" step="0.01" min="0" required><br>
+        
+        <label for="mortgageAmount">Mortgage Amount (€)</label>
+        <input type="number" id="mortgageAmount" min="0" required><br>
+        
+        <label for="duration">Duration (years)</label>
+        <input type="number" id="duration" min="1" required><br>
+        
+        <label for="monthlyExpenses">Monthly Expenses (€)</label>
+        <input type="number" id="monthlyExpenses" min="0" required><br>
+        
+        <label for="monthlyRevenue">Monthly Revenue (€)</label>
+        <input type="number" id="monthlyRevenue" min="0" required><br>
+        
+        <label for="monthlyPayment">Monthly Payment</label>
+        <output id="monthlyPayment"></output><br>
+        
+        <label for="totalInterestsPaid">Total Interests Paid</label>
+        <output id="totalInterestsPaid"></output><br>
+        
+        <label for="weightOfCredit">Weight of Credit (%)</label>
+        <output id="weightOfCredit"></output><br>
+        
+        <button onclick="calculate()">Calculate</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
